@@ -1,0 +1,19 @@
+<div id="client-page">
+    <div class="container">
+        <h1>{{cliente.nome}}</h1>
+        <p>Sexo: {{cliente.sexo}}</p>
+        <p>Data de Nascimento: {{cliente.nascimento}}</p>
+        <p>CEP: {{cliente.cep}}</p>
+        <p>Bairro: {{cliente.bairro}}</p>
+        <p>UF: {{cliente.uf}}</p>
+        <p>Cidade: {{cliente.cidade}}</p>
+        <p>Telefone: {{cliente.telefone}}</p>
+        <p>Email: {{cliente.email}}</p>
+        <div class="actions">
+            <a href="/client/editar/{{cliente.id}}">Editar</a>
+            <form action="/client/remover" method="post">
+                <input type="submit" value="Remover">
+            </form>
+        </div>
+    </div>
+</div>
