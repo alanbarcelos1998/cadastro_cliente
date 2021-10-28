@@ -4,14 +4,11 @@
         <p>Sexo: {{cliente.sexo}}</p>
         <p>Data de Nascimento: {{cliente.nascimento}}</p>
         <p>CEP: {{cliente.cep}}</p>
-        <p>Bairro: {{cliente.bairro}}</p>
-        <p>UF: {{cliente.uf}}</p>
-        <p>Cidade: {{cliente.cidade}}</p>
         <p>Telefone: {{cliente.telefone}}</p>
         <p>Email: {{cliente.email}}</p>
         <div class="actions">
-            <a href="/client/editar/{{cliente.id}}">Editar</a>
-            <form action="/client/remover" method="post">
+            <button type="submit"><a href="/cliente/editar/{{cliente.id}}">Editar</a></button>           
+            <form action="/cliente/remover/{{cliente.id}}" method="post">
                 <input type="submit" value="Remover">
             </form>
         </div>

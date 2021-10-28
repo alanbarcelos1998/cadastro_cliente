@@ -1,6 +1,6 @@
 const express = require('express')
 const exphbs = require('express-handlebars')
-const querys = require('./routers/client')
+const querys = require('./routers/cliente')
 const pool = require('./db/conn')
 
 const app = express()
@@ -14,11 +14,11 @@ app.set('view engine', 'handlebars')
 
 app.use(express.static('public'))
 
-app.get('/client', (req,res) => {
+app.get('/cliente', (req,res) => {
     res.render('home')
 })
 
-app.use('/client', querys)
+app.use('/cliente', querys)
 
 
 

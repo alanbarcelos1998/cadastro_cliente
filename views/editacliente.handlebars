@@ -1,0 +1,27 @@
+<h1>Editar cliente</h1>
+<form action="/cliente/editar" method="post" id="cadForm">
+    <input type="hidden" name="id" value="{{cliente.id}}">
+    <div class="form-control">
+        <label for="title">Nome: </label>
+        <input type="text" name="nome" value="{{cliente.nome}}">
+
+        <label for="sexo">Sexo</label>
+        <select name="sexo">
+            <option value="M">Masculino</option>
+            <option value="F">Feminino</option>
+        </select>
+        
+        <label for="nascimento">Data de Nascimento</label>
+        <input type="date" name="nascimento" value="{{cliente.nascimento}}">
+        
+        <label for="cep">CEP</label>
+        <input type="text" name="cep" maxlength="8" value="{{cliente.cep}}">
+        
+        <label for="telefone">Telefone</label>
+        <input type="tel" name="telefone" maxlength="11" value="{{cliente.telefone}}">
+        
+        <label for="email">Email</label>
+        <input type="text" name="email" value="{{cliente.email}}">
+    </div>
+    <input type="submit" value="Alterar" id="submit">
+</form>

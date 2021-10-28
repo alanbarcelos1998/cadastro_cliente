@@ -1,8 +1,8 @@
 <h1>Cadastrar cliente</h1>
-<form action="/client/insert" method="post" id="cadForm">
+<form action="/cliente/insert" method="post" id="cadForm">
     <div class="form-control">
         <label for="nome">Nome</label>
-        <input type="text" name="nome" maxlength="70">
+        <input type="text" name="nome" maxlength="70" required>
         
         <label for="sexo">Sexo</label>
         <select name="sexo">
@@ -11,25 +11,16 @@
         </select>
         
         <label for="nascimento">Data de Nascimento</label>
-        <input type="date" name="nascimento">
+        <input type="date" name="nascimento" required>
         
         <label for="cep">CEP</label>
-        <input type="text" name="cep" maxlength="8">
-        
-        <label for="bairro">Bairro</label>
-        <input type="text" name="bairro">
-        
-        <label for="uf">UF</label>
-        <input type="text" name="uf" maxlength="2">
-        
-        <label for="cidade">Cidade</label>
-        <input type="text" name="cidade">
+        <input type="text" name="cep" maxlength="8" required>
         
         <label for="telefone">Telefone</label>
-        <input type="tel" name="telefone" maxlength="11">
+        <input type="tel" name="telefone" maxlength="11" required>
         
         <label for="email">Email</label>
-        <input type="text" name="email">
+        <input type="text" name="email" required>
 
     </div>
     <input type="submit" value="Cadastrar" id="submit">
