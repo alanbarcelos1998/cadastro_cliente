@@ -1,6 +1,6 @@
 const express = require('express')
 const exphbs = require('express-handlebars')
-const querys = require('./routers/cliente')
+const clientRoutes = require('./routers/clientRoutes')
 const pool = require('./db/conn')
 
 const app = express()
@@ -14,12 +14,6 @@ app.set('view engine', 'handlebars')
 
 app.use(express.static('public'))
 
-app.get('/cliente', (req,res) => {
-    res.render('home')
-})
+app.use('/client', clientRoutes)
 
-app.use('/cliente', querys)
-
-
-
-app.listen(3001)
+app.listen(3001, () => {console.log('Conectado ao servidor!')})

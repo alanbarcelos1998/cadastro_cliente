@@ -1,29 +1,11 @@
 const { application } = require('express')
 const express = require('express')
 const router = express.Router()
-const pool = require('../db/conn')
+const ClientController = require('../controllers/clientController')
 
-router.post('/inserir', (req,res,next) => {
-    const nome = req.body.nome
-    const sexo = req.body.sexo
-    const nascimento = req.body.nascimento
-    const cep = req.body.cep
-    const telefone = req.body.telefone
-    const email = req.body.email
-
-    const sql = `INSERT INTO clientes (??, ??, ??, ??, ??, ??) VALUES (?, ?, ?, ?, ?, ?)`
-    const data = ['nome','sexo', 'nascimento', 'cep', 'telefone', 'email',
-    nome, sexo, nascimento, cep, telefone, email]
-
-    pool.query(sql, data, (err) => {
-        if (err){
-            console.log(err)
-            return
-        }
-
-        res.redirect('/cliente/lista')
-    })
-})
+//router.get('/', (req,res) => { res.render()})
+router.get('/', ClientController.createClient )
+router.post('/insert', ClientController.createClientInsert)
 
 router.get('/lista', (req,res) => {
     const sql = "SELECT * FROM clientes"
