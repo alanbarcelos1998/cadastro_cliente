@@ -1,11 +1,15 @@
-const mysql = require('mysql')
+const {Sequelize} = require('sequelize')
 
-const pool = mysql.createPool({
-    connectionLimit: 10,
+const sequelize = new Sequelize('cad_client', 'root', 'root', {
     host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'cad_cliente'
+    dialect: 'mysql'
 })
 
-module.exports = pool
+try{
+    sequelize.authenticate()
+    console.log('Conectado ao banco')
+} catch(err){
+    console.log(`Não foi possível conectar ${err}`)
+}
+
+module.exports = sequelize

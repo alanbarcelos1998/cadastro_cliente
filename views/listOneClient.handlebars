@@ -1,0 +1,16 @@
+<div id="client-page">
+    <div class="container">
+        <h1>{{client.name}}</h1>
+        <p>Sexo: {{client.sex}}</p>
+        <p>Data de Nascimento: {{client.birthday}}</p>
+        <p>Telefone: {{client.phone}}</p>
+        <p>Email: {{client.email}}</p>
+        <div class="actions">
+            <button type="submit"><a href="/client/edit/{{client.id}}">Editar</a></button>           
+            <form action="/client/remove" method="post">
+                <input type="hidden" name="id" value="{{client.id}}">
+                <input type="submit" value="Remover">
+            </form>
+        </div>
+    </div>
+</div>

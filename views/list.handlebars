@@ -1,0 +1,9 @@
+<h1>lista de clientes</h1>
+<div class="clients-container">
+    {{#each client}}
+        <div>
+            #{{this.id}} - 
+            <span class="bold"><a href="/client/oneclient/{{this.id}}">{{this.name}}</a></span>
+        </div>
+    {{/each}}
+</div>

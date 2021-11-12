@@ -1,5 +1,5 @@
 #       Cadastro_cliente 
-<p> Este projeto é um CRUD utilizando o módulo MySQL e Express</p>
+<p> Este projeto é um CRUD utilizando o módulo MySQL2, Sequelize e Express</p>
 
 ## Como utilizar
      Passo 1:  
@@ -15,4 +15,4 @@
         Ir a qualquer navegador e colocar localhost:3001/clientes/
 
 ## Arquitetura da aplicação
-<p> A aplicação se baseia em uma arquitetura "comum" encontrada em projetos de iniciantes no desenvolvimento com Node, todavia esta aplicação não segue o cleancode, fazendo se necessário que ser revisto com o tempo e melhorado.  </p>
+<p> A aplicação se baseia em uma arquitetura MVC encontrada em projetos de iniciantes no desenvolvimento com Node. </p>
